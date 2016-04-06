@@ -1,0 +1,64 @@
+{
+  "name": "visibility-change-ponyfill",
+  "version": "1.0.0",
+  "description": "A more reliable visibilitychange event that works in more mobile WebViews",
+  "license": "MIT",
+  "repository": "bfred-it/visibility-change-ponyfill",
+  "author": "Federico Brigante <bfred-it@users.noreply.github.com> (twitter.com/bfred_it)",
+  "keywords": [
+    "browser",
+    "visibility",
+    "change",
+    "visibilitychange",
+    "ios",
+    "mobile",
+    "chrome",
+    "event",
+    "pageshow",
+    "pagehide",
+    "android",
+    "uiwebview",
+    "webview",
+    "app"
+  ],
+  "files": [
+    "dist/visibility-change-ponyfill.common-js.js",
+    "dist/visibility-change-ponyfill.es-modules.js"
+  ],
+  "main": "dist/visibility-change-ponyfill.common-js.js",
+  "jsnext:main": "dist/visibility-change-ponyfill.es-modules.js",
+  "babel": {
+    "presets": [
+      "es2015-rollup"
+    ]
+  },
+  "scripts": {
+    "build:js": "bfred-npm-bundler visibility-change-ponyfill onVisibilityChange",
+    "build:size": "gzip-size dist/visibility-change-ponyfill.browser.js",
+    "build": "npm-run-all --silent jsfix build:*",
+    "jsfix": "xo --fix",
+    "watch:server": "browser-sync start --server --files '*.html,dist/*.browser.js'",
+    "watch:build": "onchange 'index.js' 'lib/*' -i -v -- npm run build -- -c",
+    "watch": "npm-run-all --parallel --silent watch:*",
+    "prepublish": "npm run build",
+    "test": "xo"
+  },
+  "devDependencies": {
+    "babel-preset-es2015-rollup": "^1.1.1",
+    "bfred-npm-bundler": "^5.0.0",
+    "gzip-size-cli": "^1.0.0",
+    "npm-run-all": "^1.7.0",
+    "onchange": "^2.2.0",
+    "xo": "^0.13.0"
+  },
+  "xo": {
+    "esnext": true,
+    "env": [
+      "browser"
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/bfred-it/visibility-change-ponyfill/issues"
+  },
+  "homepage": "https://github.com/bfred-it/visibility-change-ponyfill#readme"
+}
