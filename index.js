@@ -7,15 +7,11 @@ let timer;
 function getVisibility() {
 	return document.hidden;
 }
-function catchExecutionErrors(fn) {
-	try {
-		fn();
-	} catch (e) {}
-}
+
 const observer = onChange(
 	getVisibility,
 	() => {
-		handlers.forEach(catchExecutionErrors);
+		handlers.forEach(setTimeout); // with setTimeout errors won't stop the loop
 	}
 );
 
