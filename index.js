@@ -38,10 +38,12 @@ function onVisibilityChange(handler) {
 	handlers.push(debouncer.verify);
 
 	maybeStartLoop();
-	const remove = function () {
-		handlers = handlers.filter(fn => fn !== debouncer.verify);
+	const remove = function (onlyRemoveEventListener) {
 		document.removeEventListener('visibilitychange', debouncer.verify);
-		maybeEndLoop();
+		if (!onlyRemoveEventListener) {
+			handlers = handlers.filter(fn => fn !== debouncer.verify);
+			maybeEndLoop();
+		}
 	};
 
 	// Store the remove function on the handler
@@ -51,7 +53,7 @@ function onVisibilityChange(handler) {
 }
 onVisibilityChange.removeAll = function () {
 	handlers.forEach(fn => {
-		fn.remove();
+		fn.remove(true);
 	});
 	handlers.length = 0;
 	maybeEndLoop();
