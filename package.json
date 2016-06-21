@@ -23,7 +23,8 @@
   ],
   "files": [
     "dist/visibility-change-ponyfill.common-js.js",
-    "dist/visibility-change-ponyfill.es-modules.js"
+    "dist/visibility-change-ponyfill.es-modules.js",
+    "dist/visibility-change-ponyfill.browser.js"
   ],
   "main": "dist/visibility-change-ponyfill.common-js.js",
   "jsnext:main": "dist/visibility-change-ponyfill.es-modules.js",
