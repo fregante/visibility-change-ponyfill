@@ -36,9 +36,10 @@ onVisibilityChange(function () {
 To remove a listener:
 
 ```js
-var listener = onVisibilityChange(function () { /* */ });
+function yourOnChangeListener() { /* */ };
+onVisibilityChange(yourOnChangeListener);
 
-listener.remove();
+onVisibilityChange.remove(yourOnChangeListener);
 ```
 
 To remove all listeners:
