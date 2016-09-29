@@ -2,7 +2,9 @@
 
 > A more reliable visibilitychange event that works in more mobile WebViews
 
-[![gzipped size](https://badges.herokuapp.com/size/github/bfred-it/visibility-change-ponyfill/master/dist/visibility-change-ponyfill.browser.js?gzip=true&label=gzipped%20size)](#readme) [![Travis build status](https://api.travis-ci.org/bfred-it/visibility-change-ponyfill.svg?branch=master)](https://travis-ci.org/bfred-it/visibility-change-ponyfill) 
+[![gzipped size](https://badges.herokuapp.com/size/github/bfred-it/visibility-change-ponyfill/master/dist/visibility-change-ponyfill.browser.js?gzip=true&label=gzipped%20size)](#readme)
+[![Travis build status](https://api.travis-ci.org/bfred-it/visibility-change-ponyfill.svg?branch=master)](https://travis-ci.org/bfred-it/visibility-change-ponyfill)
+[![npm version](https://img.shields.io/npm/v/visibility-change-ponyfill.svg)](https://www.npmjs.com/package/visibility-change-ponyfill) 
 
 ## Install
 
