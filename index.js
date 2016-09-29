@@ -1,5 +1,3 @@
-'use strict';
-
 import onChange from './lib/manual-on-change';
 
 let handlers = [];

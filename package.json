@@ -19,6 +19,7 @@
     "android",
     "uiwebview",
     "webview",
+    "ponyfill",
     "app"
   ],
   "files": [
