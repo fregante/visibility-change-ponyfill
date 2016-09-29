@@ -1,6 +1,6 @@
 {
   "name": "visibility-change-ponyfill",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A more reliable visibilitychange event that works in more mobile WebViews",
   "license": "MIT",
   "repository": "bfred-it/visibility-change-ponyfill",
