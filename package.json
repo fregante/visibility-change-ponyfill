@@ -39,9 +39,9 @@
   },
   "devDependencies": {
     "bfred-npm-bundler": "^7.1.2",
-    "npm-run-all": "^3.1.0",
-    "onchange": "^3.0.0",
-    "xo": "^0.16.0"
+    "npm-run-all": "^4.0.2",
+    "onchange": "^3.2.1",
+    "xo": "^0.18.2"
   },
   "xo": {
     "esnext": true,
