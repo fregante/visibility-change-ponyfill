@@ -6,7 +6,7 @@ let isBeingTracked;
 const verifyVisibilityChange = onChange(
 	() => document.hidden,
 	() => {
-		handlers.forEach(setTimeout); // with setTimeout errors won't stop the loop
+		handlers.forEach(setTimeout); // With setTimeout errors won't stop the loop
 	}
 );
 
@@ -18,7 +18,7 @@ function maybeStartTracking() {
 }
 
 function maybeStopTracking() {
-	if (!handlers.length) {
+	if (handlers.length === 0) {
 		isBeingTracked = clearInterval(isBeingTracked);
 		document.removeEventListener('visibilitychange', verifyVisibilityChange);
 	}
