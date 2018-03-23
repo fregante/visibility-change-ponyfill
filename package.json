@@ -26,7 +26,7 @@
     "dist"
   ],
   "main": "dist/visibility-change-ponyfill.common-js.js",
-  "modules": "dist/visibility-change-ponyfill.es-modules.js",
+  "module": "dist/visibility-change-ponyfill.es-modules.js",
   "jsnext:main": "dist/visibility-change-ponyfill.es-modules.js",
   "scripts": {
     "build:js": "bfred-npm-bundler visibility-change-ponyfill onVisibilityChange",
