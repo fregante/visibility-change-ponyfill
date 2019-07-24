@@ -2,26 +2,26 @@
   "name": "visibility-change-ponyfill",
   "version": "2.0.3",
   "description": "A more reliable visibilitychange event that works in more mobile WebViews",
-  "license": "MIT",
-  "repository": "bfred-it/visibility-change-ponyfill",
-  "author": "Federico Brigante <github@bfred.it> (bfred.it)",
   "keywords": [
+    "android",
+    "app",
     "browser",
-    "visibility",
     "change",
-    "visibilitychange",
-    "ios",
-    "mobile",
     "chrome",
     "event",
-    "pageshow",
+    "ios",
+    "mobile",
     "pagehide",
-    "android",
-    "uiwebview",
-    "webview",
+    "pageshow",
     "ponyfill",
-    "app"
+    "uiwebview",
+    "visibility",
+    "visibilitychange",
+    "webview"
   ],
+  "repository": "fregante/visibility-change-ponyfill",
+  "license": "MIT",
+  "author": "Federico Brigante <opensource@bfred.it> (bfred.it)",
   "files": [
     "dist"
   ],
@@ -29,29 +29,25 @@
   "module": "dist/visibility-change-ponyfill.es-modules.js",
   "jsnext:main": "dist/visibility-change-ponyfill.es-modules.js",
   "scripts": {
-    "build:js": "bfred-npm-bundler visibility-change-ponyfill onVisibilityChange",
     "build": "npm-run-all --silent jsfix build:*",
+    "build:js": "bfred-npm-bundler visibility-change-ponyfill onVisibilityChange",
     "jsfix": "xo --fix",
-    "watch:build": "onchange 'index.js' --initial -- npm run build -- --continue-on-error",
-    "watch": "npm-run-all --parallel --silent watch:*",
     "prepublish": "npm run build",
+    "test": "npm run build",
     "version": "npm run build && git add dist",
-    "test": "npm run build"
+    "watch": "npm-run-all --parallel --silent watch:*",
+    "watch:build": "onchange 'index.js' --initial -- npm run build -- --continue-on-error"
+  },
+  "xo": {
+    "env": [
+      "browser"
+    ],
+    "esnext": true
   },
   "devDependencies": {
     "bfred-npm-bundler": "^7.1.2",
     "npm-run-all": "^4.0.2",
     "onchange": "^3.2.1",
     "xo": "^0.18.2"
-  },
-  "xo": {
-    "esnext": true,
-    "env": [
-      "browser"
-    ]
-  },
-  "bugs": {
-    "url": "https://github.com/bfred-it/visibility-change-ponyfill/issues"
-  },
-  "homepage": "https://github.com/bfred-it/visibility-change-ponyfill#readme"
+  }
 }
